@@ -1,0 +1,109 @@
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .projetos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .card a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .elyndra-img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  input, button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #map {
+    height: 250px;
+  }
+
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  .book-page {
+    padding: 1rem;
+  }
+
+  .nextprev-btn {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  footer p {
+    margin: 5px 0;
+  }
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .teclado {
+    max-width: 100%;
+    gap: 6px;
+  }
+
+  .letra {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+}

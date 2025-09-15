@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #1a2a6c, #031c7e, #020793);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #ffcc00;
+}
+
+#palavra {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  margin: 1rem 0;
+}
+
+#teclado {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+#teclado button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#teclado button:hover {
+  background: #ffcc00;
+  color: black;
+}
+
+#teclado button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+#erros {
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: #ff6666;
+}
+
+#mensagem {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* 🔄 Botões agrupados */
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* 🔁 Reiniciar */
+#reiniciar {
+  background: #ffcc00;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#reiniciar:hover {
+  background: #ffaa00;
+}
+
+/* ⬅️ Voltar */
+.btn-voltar {
+  padding: 0.7rem 1.2rem;
+  background: #004c99;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+
+.btn-voltar:hover {
+  background: #003366;
+}
+
+

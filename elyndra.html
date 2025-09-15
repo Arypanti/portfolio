@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>As Crônicas de Elyndra</title>
+  <link rel="stylesheet" href="style-elyndra.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <!-- CAPA -->
+    <div class="cover" id="bookCover">
+      <button id="startBtn">📖 Abrir Livro</button>
+    </div>
+
+    <!-- CONTROLE DE MÚSICA -->
+    <div class="controle-musica">
+      <button id="toggleMusic">🔊 Pausar Música</button>
+    </div>
+
+    <!-- LIVRO -->
+    <div class="book" id="book">
+
+      <!-- Capítulo 1 -->
+<div id="pagina1" class="pagina ativa">
+  <h2>Capítulo 1 – A Lua Escarlate</h2>
+  <p>
+    Em uma noite em que Elyndra nasceu, um presságio surgiu em meio aos eclipses sangrentos.  
+    As estrelas se apagaram por instantes, e os anciãos sentiram o peso de uma linhagem esquecida.  
+    A criança não chorou — ela observou. Seus olhos, vermelhos como a lua, refletiam um destino que nem os mais antigos ousavam nomear.  
+    A vila de Sangrath silenciou, e o tempo pareceu parar.
+  </p>
+
+  <!-- Carta de Elyndra -->
+  <div class="cartas-vampiras">
+    <div class="carta-container">
+      <div class="carta">
+        <div class="frente escarlate destaque">
+          <img src="img/elyndra.jpg" alt="Elyndra">
+          <h3>Elyndra</h3>
+          <p>Última da linhagem</p>
+        </div>
+        <div class="verso">
+          <h3>Biografia</h3>
+          <p>
+            Elyndra nasceu sob o eclipse escarlate, marcada por um silêncio ancestral.  
+            Portadora da Espada de Sangue, ela carrega em si o poder dos antigos e o peso de um destino que pode salvar — ou condenar — Sangrath.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navegação -->
+  <div style="text-align:center; margin-top:2rem;">
+    <button class="btn" onclick="mostrarPagina('pagina2')">➡ Próximo</button>
+  </div>
+</div>
+
+
+
+     <!-- Capítulo 2 -->
+<div id="pagina2" class="pagina">
+  <h2>Capítulo 2 – O Conselho dos Antigos</h2>
+  <p>
+    O Conselho dos Antigos se reúne sob o véu da noite eterna, onde cada membro carrega séculos de sabedoria e cicatrizes de guerras esquecidas.  
+    Elyndra, marcada pela visão da Lua Escarlate, é convocada a se apresentar diante deles.  
+    As tochas acesas em sangue flamejante iluminam rostos que não envelhecem.
+  </p>
+  <p>
+    Kael, o Guardião das Ruínas, quebra o silêncio:  
+    <em>“A linhagem desperta. Mas será ela redenção... ou ruína?”</em>  
+    Seraphine, a Oráculo das Sombras, revela uma profecia esquecida:  
+    <em>“Quando a Lua Escarlate se erguer pela terceira vez, o sangue escolhido decidirá o destino de Sangrath.”</em>
+  </p>
+
+  <!-- Cartas do capítulo -->
+  <div class="cartas-vampiras">
+    <!-- Kael -->
+    <div class="carta-container">
+      <div class="carta">
+        <div class="frente destaque">
+          <img src="img/kael.jpg" alt="Kael">
+          <h3>Kael</h3>
+          <p>Guardião dos Ecos</p>
+        </div>
+        <div class="verso">
+          <h3>Biografia</h3>
+          <p>
+            Kael escuta o que o tempo tenta esconder.  
+            Ele guarda os segredos que nem os oráculos ousam pronunciar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navegação -->
+  <button class="btn" onclick="mostrarPagina('pagina1')">⬅ Voltar</button>
+  <button class="btn" onclick="mostrarPagina('pagina3')">➡ Capítulo 3</button>
+</div>
+
+<!-- Capítulo 3 -->
+<div id="pagina3" class="pagina">
+  <h2>Capítulo 3 – O Exílio de Malrik</h2>
+  <p>
+    Malrik, o renegado, retorna após um século de exílio.  
+    Expulso da linhagem por tentar destruir a Espada de Sangue, ele carrega em seu sangue uma maldição — e uma chave.  
+    Ele não volta por vingança. Volta por redenção. Ou pelo fim.
+  </p>
+  <p>
+    Ao cruzar os portões esquecidos, Malrik sussurra:  
+    <em>“Se ela for como dizem... talvez ainda haja esperança.”</em>
+  </p>
+
+  <!-- Cartas do capítulo -->
+  <div class="cartas-vampiras">
+    <!-- Malrik -->
+    <div class="carta-container">
+      <div class="carta">
+        <div class="frente sangrath">
+          <img src="img/malrik.jpg" alt="Malrik">
+          <h3>Malrik</h3>
+          <p>O Exilado</p>
+        </div>
+        <div class="verso">
+          <h3>Biografia</h3>
+          <p>
+            Malrik viveu entre os espectros do Norte, aprendendo segredos proibidos.  
+            Agora, retorna com um pacto selado — e um destino entrelaçado ao de Elyndra.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navegação -->
+  <button class="btn" onclick="mostrarPagina('pagina2')">⬅ Voltar ao Conselho</button>
+  <button class="btn" onclick="mostrarPagina('pagina4')">➡ Capítulo 4</button>
+</div>
+
+
+
+      <!-- Capítulo 4 -->
+      <div id="pagina4" class="pagina">
+        <h2>Capítulo 4 – Seraphine e o Véu da Verdade</h2>
+        <p>
+          Seraphine, a Oráculo das Sombras, revela que a Espada de Sangue foi forjada por um pacto entre luz e trevas.  
+          Elyndra, ao despertar, reativou forças que dormiam há milênios.  
+          O véu entre mundos está se rasgando. E a escolha se aproxima.
+        </p>
+        <div class="cartas-vampiras">
+          <div class="carta-container">
+            <div class="carta">
+              <div class="frente destaque">
+                <img src="img/seraphine.jpg" alt="Seraphine">
+                <h3>Seraphine</h3>
+                <p>Oráculo das Sombras</p>
+              </div>
+              <div class="verso">
+                <h3>Biografia</h3>
+                <p>
+                  Seraphine vive entre visões e murmúrios, guiando os escolhidos e alertando os condenados.  
+                  Ela conhece o fim — mas nunca revela o caminho.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn" onclick="mostrarPagina('pagina3')">⬅ Voltar ao Exílio</button>
+        <button class="btn" onclick="mostrarPagina('pagina5')">➡ Capítulo 5</button>
+      </div>
+
+      <!-- Capítulo 5 -->
+      <div id="pagina5" class="pagina">
+        <h2>Capítulo 5 – Nyssa e o Juramento Quebrado</h2>
+        <p>
+          Nyssa, irmã de Elyndra, retorna após anos desaparecida.  
+          Ela carrega a Lâmina Sombria e desafia Elyndra pelo direito de liderar a linhagem.  
+          A guerra entre irmãs está prestes a começar.
+        </p>
+        <div class="cartas-vampiras">
+          <div class="carta-container">
+            <div class="carta">
+              <div class="frente renegado destaque">
+                <img src="img/nyssa.jpg" alt="Nyssa">
+                <h3>Nyssa</h3>
+                <p>A Irmã Perdida</p>
+              </div>
+              <div class="verso">
+                <h3>Biografia</h3>
+                <p>
+                  Nyssa sobreviveu ao massacre de Virella e foi corrompida por forças além do véu.  
+                  Agora, retorna como portadora da Lâmina Sombria.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn" onclick="mostrarPagina('pagina4')">⬅ Voltar à Seraphine</button>
+        <button class="btn" onclick="mostrarPagina('pagina6')">➡ Capítulo 6</button>
+      </div>
+
+   <!-- Capítulo 6 -->
+<div id="pagina6" class="pagina">
+  <h2>Capítulo 6 – O Chamado de Thorne</h2>
+  <p>
+    Thorne, o Caçador Silencioso, emerge das florestas de Virella.  
+    Ele protege Elyndra desde o nascimento, e agora retorna para cumprir seu juramento final.  
+    A guerra não será apenas entre irmãs. Será entre destinos.
+  </p>
+
+  <!-- Carta de Thorne -->
+  <div class="cartas-vampiras">
+    <div class="carta-container">
+      <div class="carta">
+        <div class="frente sangrath">
+          <img src="img/thorne.jpg" alt="Thorne">
+          <h3>Thorne</h3>
+          <p>O Caçador Silencioso</p>
+        </div>
+        <div class="verso">
+          <h3>Biografia</h3>
+          <p>Treinado para caçar o que não pode ser visto. Jurou proteger Elyndra desde o nascimento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mensagem profética -->
+  <p style="text-align:center; font-style:italic; margin-top:2rem;">
+    A linhagem está incompleta.  
+    Ainda há nomes a serem revelados...  
+    E quando o eclipse final chegar, apenas os escolhidos saberão o desfecho.  
+    <br><br>
+    ⚔️ Prepare-se. O capítulo 7 será uma missão.
+  </p>
+
+  <!-- Navegação final -->
+  <div style="text-align:center; margin-top:2rem;">
+    <button class="btn" onclick="mostrarPagina('pagina5')">⬅ Voltar ao Capítulo 5</button>
+    <button class="btn" onclick="mostrarPagina('pagina-linhagem')">🌙 Conheça a Linhagem</button>
+    <button class="btn" onclick="mostrarPagina('pagina-epilogo')">➡ Epílogo</button>
+  </div>
+</div>
+
+<!-- Capítulo Especial – A Linhagem -->
+<div id="pagina-linhagem" class="pagina">
+  <h2>Capítulo Especial – A Linhagem</h2>
+  <p>A linhagem sanguínea se estende por eras. Cada nome carrega um destino, e cada destino, uma escolha.</p>
+  <div class="cartas-vampiras">
+    <!-- Elyndra -->
+    <div class="carta-container">
+      <div class="carta">
+        <div class="frente escarlate destaque">
+          <img src="img/elyndra.jpg" alt="Elyndra">
+          <h3>Elyndra</h3>
+          <p>Última da linhagem</p>
+        </div>
+        <div class="verso">
+          <h3>Biografia</h3>
+          <p>Portadora da Espada de Sangue, treinada na arte da espada e na sabedoria dos antigos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Malrik -->
+    <div class="carta-container">
+      <div class="carta">
+        <div class="frente sangrath">
+          <img src="img/malrik.jpg" alt="Malrik">
+          <h3>Malrik</h3>
+          <p>O Exilado</p>
+        </div>
+        <div class="verso">
+          <h3>Biografia</h3>
+          <p>Renegado da linhagem, banido por tentar destruir a Espada de Sangue. Retorna com um pacto selado.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seraphine -->
+    <div class="carta-container">
+      <div class="carta">
+        <div class="frente destaque">
+          <img src="img/seraphine.jpg" alt="Seraphine">
+          <h3>Seraphine</h3>
+          <p>Oráculo das Sombras</p>
+        </div>
+        <div class="verso">
+          <h3>Biografia</h3>
+          <p>Guiada por visões, ela conhece o fim — mas nunca revela o caminho.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nyssa -->
+    <div class="carta-container">
+      <div class="carta">
+        <div class="frente renegado destaque">
+          <img src="img/nyssa.jpg" alt="Nyssa">
+          <h3>Nyssa</h3>
+          <p>A Irmã Perdida</p>
+        </div>
+        <div class="verso">
+          <h3>Biografia</h3>
+          <p>Sobreviveu ao massacre de Virella e foi corrompida por forças além do véu.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thorne -->
+    <div class="carta-container">
+      <div class="carta">
+        <div class="frente sangrath">
+          <img src="img/thorne.jpg" alt="Thorne">
+          <h3>Thorne</h3>
+          <p>O Caçador Silencioso</p>
+        </div>
+        <div class="verso">
+          <h3>Biografia</h3>
+          <p>Treinado para caçar o que não pode ser visto. Jurou proteger Elyndra desde o nascimento.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kael -->
+    <div class="carta-container">
+      <div class="carta">
+        <div class="frente destaque">
+          <img src="img/kael.jpg" alt="Kael">
+          <h3>Kael</h3>
+          <p>Guardião dos Ecos</p>
+        </div>
+        <div class="verso">
+          <h3>Biografia</h3>
+          <p>Kael escuta o que o tempo tenta esconder. Ele guarda os segredos que nem os oráculos ousam pronunciar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navegação -->
+  <div style="text-align:center; margin-top:2rem;">
+    <button class="btn" onclick="mostrarPagina('pagina6')">⬅ Voltar ao Capítulo 6</button>
+    <button class="btn" onclick="mostrarPagina('pagina-epilogo')">➡ Ir para o Epílogo</button>
+  </div>
+</div>
+
+<!-- Epílogo -->
+<div id="pagina-epilogo" class="pagina">
+  <h2>Epílogo – O Legado da Escarlate</h2>
+  <p>A Espada de Sangue repousa agora sob o altar da lua escarlate...</p>
+  <hr />
+  <p style="text-align:center; font-style:italic; margin-top:2rem;">
+    Quer saber o que acontece nos capítulos finais?<br />
+    Então talvez seja hora de me contratar.<br />
+    Porque algumas lendas... só se revelam aos escolhidos.
+  </p>
+
+  <!-- Navegação -->
+  <div style="text-align:center; margin-top:2rem;">
+    <button class="btn" onclick="mostrarPagina('pagina-linhagem')">⬅ Voltar à Linhagem</button>
+    <button class="btn" onclick="mostrarPagina('pagina6')">🔙 Retornar ao Capítulo 6</button>
+  </div>
+</div>
+
+<!-- ÁUDIO -->
+<audio id="bg-music" loop>
+  <source src="audio/virar.mp3" type="audio/mp3" />
+</audio>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+<div class="botoes">
+  <a href="index.html" class="btn-voltar">⬅️ Voltar ao Portfólio</a>
+</div>
+
+</body>
+</html>

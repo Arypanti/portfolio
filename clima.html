@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previsão do Tempo</title>
+  <link rel="stylesheet" href="clima.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <h1>🌦️ Previsão do Tempo</h1>
+  <input type="text" id="cidade" placeholder="Digite a cidade">
+  <button onclick="buscarClima()">Buscar</button>
+
+  <div id="resultado"></div>
+  <div id="mapa" style="height: 300px; margin-top: 20px;"></div>
+
+  <!-- Botão de retorno ao portfólio -->
+  <div class="botoes">
+    <a href="index.html" class="btn-voltar">⬅️ Voltar ao Portfólio</a>
+  </div>
+
+  <script src="clima.js"></script>
+</body>
+</html>
+
+
+
