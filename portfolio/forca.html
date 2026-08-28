@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jogo da Forca | Ariany Pantaleão</title>
+
+    <link rel="stylesheet" href="forca.css">
+
+   
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <header class="header">
+
+            <p class="label">
+                PROJETO 04 — JAVASCRIPT
+            </p>
+
+            <h1>
+                Jogo da Forca
+            </h1>
+
+            <p class="subtitle">
+                Descubra a palavra antes que a forca seja completada.
+            </p>
+
+        </header>
+
+
+        <section class="game">
+
+            <!-- DESENHO -->
+            <div class="hangman">
+
+                <div class="drawing">
+
+                    <div class="base"></div>
+                    <div class="pole"></div>
+                    <div class="top"></div>
+                    <div class="rope"></div>
+
+                    <div class="part head"></div>
+                    <div class="part body"></div>
+                    <div class="part arm-left"></div>
+                    <div class="part arm-right"></div>
+                    <div class="part leg-left"></div>
+                    <div class="part leg-right"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- JOGO -->
+            <div class="game-area">
+
+                <p class="attempts">
+                    Tentativas restantes:
+                    <strong id="attempts">6</strong>
+                </p>
+
+                <div
+                    class="word"
+                    id="word"
+                ></div>
+
+                <div
+                    class="keyboard"
+                    id="keyboard"
+                ></div>
+
+                <div
+                    class="message"
+                    id="message"
+                ></div>
+
+                <button
+                    class="restart"
+                    id="restart"
+                >
+                    Jogar novamente
+                </button>
+
+                <br>
+
+                <a
+                    href="index.html"
+                    class="back"
+                >
+                    ← Voltar ao portfólio
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="forca.js"></script>
+
+</body>
+
+</html>

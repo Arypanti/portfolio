@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pimenta Flor | Ariany Pantaleão</title>
+
+    <meta
+        name="description"
+        content="Pimenta Flor — Sistema de Gestão de Vendas e Estoque desenvolvido por Ariany Pantaleão."
+    >
+
+    <link rel="stylesheet" href="style-novo.css">
+
+    <style>
+        /* =====================================================
+           PÁGINA DO PROJETO — PIMENTA FLOR
+           ===================================================== */
+
+        .project-page {
+            min-height: 100vh;
+        }
+
+        .project-hero {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 70px 40px 75px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 55px;
+            color: #aeb9d6;
+            text-decoration: none;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .back-link:hover {
+            color: #fff;
+            transform: translateX(-4px);
+        }
+
+        .project-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 13px;
+            margin-bottom: 22px;
+            border: 1px solid rgba(126, 151, 255, .25);
+            border-radius: 999px;
+            background: rgba(94, 115, 190, .08);
+            color: #9bb7ff;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .project-hero h1 {
+            margin: 0;
+            max-width: 950px;
+            font-size: clamp(52px, 8vw, 92px);
+            line-height: .95;
+            letter-spacing: -.055em;
+            color: #f5f7ff;
+        }
+
+        .project-hero h1 span {
+            background: linear-gradient(90deg, #5795ff, #8b6cff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .project-intro {
+            max-width: 800px;
+            margin: 30px 0 0;
+            color: #aeb9d6;
+            font-size: 20px;
+            line-height: 1.75;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 28px;
+        }
+
+        .project-tech span {
+            padding: 9px 14px;
+            border: 1px solid rgba(126, 151, 255, .3);
+            border-radius: 30px;
+            color: #c8d3f3;
+            background: rgba(94, 115, 190, .08);
+            font-size: 13px;
+        }
+
+        .project-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-top: 48px;
+        }
+
+        .project-stat {
+            padding: 20px;
+            border: 1px solid rgba(130, 147, 190, .16);
+            border-radius: 16px;
+            background: rgba(255,255,255,.025);
+        }
+
+        .project-stat strong {
+            display: block;
+            color: #f5f7ff;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .project-stat span {
+            color: #8f9bb9;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .project-content-area {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 10px 40px 100px;
+        }
+
+        .project-section {
+            margin-bottom: 95px;
+        }
+
+        .project-section-title {
+            margin-bottom: 32px;
+        }
+
+        .project-section-title small {
+            display: block;
+            color: #61a5ff;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .18em;
+            margin-bottom: 10px;
+        }
+
+        .project-section-title h2 {
+            margin: 0;
+            color: #f5f7ff;
+            font-size: clamp(30px, 4vw, 42px);
+            letter-spacing: -.03em;
+        }
+
+        .project-section-text {
+            max-width: 880px;
+            color: #aeb9d6;
+            font-size: 17px;
+            line-height: 1.85;
+        }
+
+        .project-section-text + .project-section-text {
+            margin-top: 18px;
+        }
+
+        /* PROBLEMA / SOLUÇÃO */
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .story-card {
+            padding: 30px;
+            border: 1px solid rgba(130,147,190,.16);
+            border-radius: 20px;
+            background: rgba(255,255,255,.025);
+        }
+
+        .story-card.solution {
+            border-color: rgba(112,143,255,.25);
+            background: linear-gradient(135deg, rgba(75,113,220,.10), rgba(127,89,224,.06));
+        }
+
+        .story-card small {
+            display: block;
+            margin-bottom: 12px;
+            color: #61a5ff;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .story-card h3 {
+            margin: 0 0 12px;
+            color: #f5f7ff;
+            font-size: 22px;
+        }
+
+        .story-card p {
+            margin: 0;
+            color: #aeb9d6;
+            line-height: 1.75;
+            font-size: 14px;
+        }
+
+        /* FUNCIONALIDADES */
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .feature-card {
+            padding: 27px;
+            border: 1px solid rgba(130,147,190,.16);
+            border-radius: 18px;
+            background: rgba(255,255,255,.025);
+            transition: .3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(112,143,255,.35);
+            background: rgba(255,255,255,.045);
+        }
+
+        .feature-icon {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            background: rgba(94,115,190,.12);
+            font-size: 21px;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 10px;
+            color: #f5f7ff;
+            font-size: 19px;
+        }
+
+        .feature-card p {
+            margin: 0;
+            color: #9da9c7;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* DESTAQUE TÉCNICO */
+
+        .project-highlight {
+            padding: 42px;
+            border-radius: 22px;
+            border: 1px solid rgba(107,138,255,.22);
+            background:
+                radial-gradient(circle at 90% 10%, rgba(127,89,224,.15), transparent 35%),
+                linear-gradient(135deg, rgba(75,113,220,.12), rgba(127,89,224,.08));
+        }
+
+        .project-highlight .highlight-label {
+            color: #8ea8ff;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        .project-highlight h2 {
+            margin: 12px 0 16px;
+            color: #fff;
+            font-size: 30px;
+        }
+
+        .project-highlight p {
+            margin: 0;
+            max-width: 850px;
+            color: #b9c4e0;
+            line-height: 1.8;
+        }
+
+        .architecture {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .architecture-item {
+            padding: 20px;
+            border: 1px solid rgba(130,147,190,.14);
+            border-radius: 15px;
+            background: rgba(0,0,0,.12);
+        }
+
+        .architecture-item strong {
+            display: block;
+            color: #f5f7ff;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .architecture-item span {
+            color: #8f9bb9;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        /* GALERIA */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 18px;
+            border: 1px solid rgba(130,147,190,.18);
+            background: #111426;
+            transition: .4s;
+        }
+
+        .gallery-item.featured-image {
+            grid-column: 1 / -1;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-6px);
+            border-color: rgba(112,143,255,.4);
+        }
+
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .gallery-item.featured-image img {
+    height: auto;
+    object-fit: contain;
+    }
+
+        .gallery-caption {
+            padding: 15px 18px;
+            color: #b4bfdc;
+            font-size: 13px;
+        }
+
+        /* APRENDIZADO */
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: 1.3fr .7fr;
+            gap: 20px;
+        }
+
+        .learning-card {
+            padding: 30px;
+            border: 1px solid rgba(130,147,190,.16);
+            border-radius: 20px;
+            background: rgba(255,255,255,.025);
+        }
+
+        .learning-card h3 {
+            margin: 0 0 12px;
+            color: #f5f7ff;
+            font-size: 20px;
+        }
+
+        .learning-card p {
+            margin: 0;
+            color: #aeb9d6;
+            line-height: 1.75;
+            font-size: 14px;
+        }
+
+        .learning-card ul {
+            margin: 0;
+            padding-left: 18px;
+            color: #aeb9d6;
+            line-height: 1.9;
+            font-size: 14px;
+        }
+
+        /* VOLTAR */
+
+        .project-footer {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 40px 80px;
+        }
+
+        .project-footer a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(90deg, #5795ff, #806cff);
+            transition: .3s;
+        }
+
+        .project-footer a:hover {
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 850px) {
+            .project-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .story-grid,
+            .learning-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .architecture {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 750px) {
+            .project-hero,
+            .project-content-area,
+            .project-footer {
+                padding-left: 22px;
+                padding-right: 22px;
+            }
+
+            .project-hero {
+                padding-top: 55px;
+            }
+
+            .features-grid,
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.featured-image {
+                grid-column: auto;
+            }
+
+            .project-highlight {
+                padding: 28px;
+            }
+
+            .project-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="project-page">
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <header class="project-hero">
+
+        <a href="index.html" class="back-link">
+            ← Voltar ao portfólio
+        </a>
+
+        <div class="project-kicker">
+            ✦ Projeto em destaque · Sistema Web
+        </div>
+
+        <h1>
+            Pimenta <span>Flor</span>
+        </h1>
+
+        <p class="project-intro">
+            Uma aplicação de gestão criada para centralizar vendas,
+            produtos, estoque, clientes, pendências e relatórios
+            em uma única experiência.
+        </p>
+
+        <div class="project-tech">
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>JavaScript</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>SQLite</span>
+        </div>
+
+        <div class="project-stats">
+            <div class="project-stat">
+                <strong>01</strong>
+                <span>Aplicação web completa</span>
+            </div>
+
+            <div class="project-stat">
+                <strong>05+</strong>
+                <span>Áreas integradas da operação</span>
+            </div>
+
+            <div class="project-stat">
+                <strong>SQLite</strong>
+                <span>Banco de dados da aplicação</span>
+            </div>
+
+            <div class="project-stat">
+                <strong>PDF</strong>
+                <span>Relatórios e exportações</span>
+            </div>
+        </div>
+
+    </header>
+
+
+    <main class="project-content-area">
+
+        <!-- VISÃO GERAL -->
+
+        <section class="project-section">
+
+            <div class="project-section-title">
+                <small>01 — A IDEIA</small>
+                <h2>Mais do que uma tela bonita: uma solução para organizar a operação</h2>
+            </div>
+
+            <p class="project-section-text">
+                O Pimenta Flor foi desenvolvido com o objetivo de transformar
+                rotinas de gestão em processos mais organizados e centralizados.
+            </p>
+
+            <p class="project-section-text">
+                A aplicação reúne diferentes áreas da operação, permitindo
+                acompanhar vendas, produtos, estoque, clientes, pendências
+                e relatórios através de uma interface única.
+            </p>
+
+            <div class="story-grid" style="margin-top: 30px;">
+
+                <article class="story-card">
+                    <small>Necessidade</small>
+                    <h3>Informações espalhadas dificultam o controle</h3>
+                    <p>
+                        Vendas, produtos, estoque e valores a receber precisam
+                        ser acompanhados de forma organizada para facilitar
+                        a rotina e reduzir retrabalho.
+                    </p>
+                </article>
+
+                <article class="story-card solution">
+                    <small>Solução</small>
+                    <h3>Uma aplicação para concentrar as informações</h3>
+                    <p>
+                        O sistema reúne os principais processos em um só lugar,
+                        com telas específicas para operação, acompanhamento
+                        financeiro e geração de relatórios.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- FUNCIONALIDADES -->
+
+        <section class="project-section">
+
+            <div class="project-section-title">
+                <small>02 — FUNCIONALIDADES</small>
+                <h2>O que o sistema oferece</h2>
+            </div>
+
+            <div class="features-grid">
+
+                <article class="feature-card">
+                    <div class="feature-icon">🛒</div>
+                    <h3>Gestão de vendas</h3>
+                    <p>
+                        Carrinho de compras, seleção de clientes, múltiplos
+                        produtos, quantidades, formas de pagamento e
+                        finalização da venda.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Controle de estoque</h3>
+                    <p>
+                        Cadastro de produtos, acompanhamento de quantidades,
+                        identificação de estoque baixo e produtos zerados.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Controle financeiro</h3>
+                    <p>
+                        Registro de vendas pendentes, valores pagos,
+                        saldos restantes e acompanhamento de valores
+                        a receber.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Clientes e pendências</h3>
+                    <p>
+                        Organização de clientes e acompanhamento detalhado
+                        das pendências, parcelas, pagamentos e valores
+                        restantes.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Histórico de vendas</h3>
+                    <p>
+                        Consulta de vendas com filtros por cliente,
+                        período, pagamento, total e detalhes dos itens.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>Relatórios</h3>
+                    <p>
+                        Indicadores da operação e exportação de informações
+                        em PDF para facilitar acompanhamento e consulta.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- DESTAQUE TÉCNICO -->
+
+        <section class="project-section">
+
+            <div class="project-highlight">
+
+                <div class="highlight-label">
+                    Arquitetura do projeto
+                </div>
+
+                <h2>Do banco de dados à interface</h2>
+
+                <p>
+                    O projeto integra uma aplicação web desenvolvida com
+                    Node.js e Express a um banco de dados SQLite, utilizando
+                    JavaScript para comunicação entre interface e backend
+                    e HTML/CSS para construção da experiência visual.
+                </p>
+
+                <div class="architecture">
+
+                    <div class="architecture-item">
+                        <strong>Frontend</strong>
+                        <span>HTML5, CSS3 e JavaScript para as telas e interações.</span>
+                    </div>
+
+                    <div class="architecture-item">
+                        <strong>Backend</strong>
+                        <span>Node.js + Express para rotas e regras da aplicação.</span>
+                    </div>
+
+                    <div class="architecture-item">
+                        <strong>Dados</strong>
+                        <span>SQLite para armazenamento e consulta das informações.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALERIA -->
+
+       <section class="project-section">
+
+    <div class="project-section-title">
+        <small>03 — INTERFACE</small>
+        <h2>Por dentro do sistema</h2>
+    </div>
+
+    <div class="gallery">
+
+        <div class="gallery-item featured-image">
+            <img
+                src="imagens/dashboard.png"
+                alt="Dashboard do sistema Pimenta Flor"
+            >
+            <div class="gallery-caption">
+                Dashboard — visão geral da operação
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="imagens/pimenta-flor-vendas.png"
+                alt="Tela de vendas do sistema Pimenta Flor"
+            >
+            <div class="gallery-caption">
+                Gestão de vendas — montagem do carrinho
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="imagens/pimenta-flor-produtos.png"
+                alt="Tela de produtos e estoque do sistema Pimenta Flor"
+            >
+            <div class="gallery-caption">
+                Produtos e estoque — controle de disponibilidade
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="imagens/pimenta-flor-pendencias.png"
+                alt="Tela de pendências do sistema Pimenta Flor"
+            >
+            <div class="gallery-caption">
+                Pendências — controle de valores a receber
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="imagens/historico-vendas.png"
+                alt="Histórico de vendas do sistema Pimenta Flor"
+            >
+            <div class="gallery-caption">
+                Histórico de vendas — filtros e indicadores
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="imagens/pimenta-flor-relatorio-estoque.png"
+                alt="Relatório de estoque do sistema Pimenta Flor"
+            >
+            <div class="gallery-caption">
+                Relatório de estoque — posição atual
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- APRENDIZADO -->
+
+        <section class="project-section">
+
+            <div class="project-section-title">
+                <small>04 — DESENVOLVIMENTO</small>
+                <h2>O que este projeto representa</h2>
+            </div>
+
+            <div class="learning-grid">
+
+                <article class="learning-card">
+
+                    <h3>Construção de uma aplicação completa</h3>
+
+                    <p>
+                        Este projeto representa experiência prática na construção
+                        de uma aplicação completa, passando pela definição das
+                        funcionalidades, estruturação do banco de dados,
+                        desenvolvimento das rotas da API, criação da interface
+                        e integração entre frontend e backend.
+                    </p>
+
+                </article>
+
+                <article class="learning-card">
+
+                    <h3>Competências colocadas em prática</h3>
+
+                    <ul>
+                        <li>Modelagem e persistência de dados</li>
+                        <li>Rotas e integração backend</li>
+                        <li>Interfaces web responsivas</li>
+                        <li>Regras de negócio</li>
+                        <li>Relatórios e indicadores</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="project-footer">
+
+        <a href="index.html">
+            ← Voltar para o portfólio
+        </a>
+
+    </footer>
+
+</body>
+</html>

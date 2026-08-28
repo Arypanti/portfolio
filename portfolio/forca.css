@@ -1,0 +1,477 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+
+            font-family: Arial, sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #151a35,
+                    #080a12 65%
+                );
+
+            color: #f4f5ff;
+        }
+
+        .game-container {
+            width: 100%;
+            max-width: 900px;
+
+            padding: 40px;
+
+            border: 1px solid rgba(112, 143, 255, 0.25);
+
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(20, 25, 42, 0.95),
+                    rgba(11, 13, 24, 0.95)
+                );
+
+            box-shadow:
+                0 25px 80px rgba(0, 0, 0, 0.45);
+        }
+
+        .header {
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+        .label {
+            color: #72c7ff;
+
+            font-size: 0.75rem;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 6vw, 4rem);
+
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #a9b4d0;
+
+            font-size: 1rem;
+        }
+
+        .game {
+            display: grid;
+
+            grid-template-columns: 1fr 1.3fr;
+
+            gap: 28px;
+
+            align-items: center;
+        }
+
+        /* FORCA */
+
+        .hangman {
+            min-height: 290px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(112, 143, 255, 0.15);
+
+            border-radius: 18px;
+
+            background: rgba(8, 10, 18, 0.45);
+        }
+
+        .drawing {
+            position: relative;
+
+            width: 220px;
+            height: 280px;
+        }
+
+        .base {
+            position: absolute;
+
+            bottom: 10px;
+            left: 20px;
+
+            width: 180px;
+            height: 6px;
+
+            background: #72c7ff;
+
+            border-radius: 10px;
+        }
+
+        .pole {
+            position: absolute;
+
+            bottom: 16px;
+            left: 45px;
+
+            width: 6px;
+            height: 230px;
+
+            background: #72c7ff;
+
+            border-radius: 10px;
+        }
+
+        .top {
+            position: absolute;
+
+            top: 25px;
+            left: 45px;
+
+            width: 120px;
+            height: 6px;
+
+            background: #72c7ff;
+
+            border-radius: 10px;
+        }
+
+        .rope {
+            position: absolute;
+
+            top: 25px;
+            left: 160px;
+
+            width: 5px;
+            height: 45px;
+
+            background: #72c7ff;
+
+            border-radius: 10px;
+        }
+
+        .part {
+            position: absolute;
+
+            display: none;
+
+            background: #9b8cff;
+
+            animation: appearPart 0.35s ease forwards;
+        }
+
+        @keyframes appearPart {
+
+          from {
+             opacity: 0;
+             transform: scale(0.6);
+           }
+
+           to {
+             opacity: 1;
+             transform: scale(1);
+            }
+
+}
+
+        .head {
+            top: 65px;
+            left: 143px;
+
+            width: 38px;
+            height: 38px;
+
+            border: 5px solid #9b8cff;
+
+            border-radius: 50%;
+
+            background: transparent;
+        }
+
+        .body {
+            top: 103px;
+            left: 159px;
+
+            width: 5px;
+            height: 70px;
+        }
+
+        .arm-left {
+            top: 120px;
+            left: 128px;
+
+            width: 65px;
+            height: 5px;
+
+            transform: rotate(-30deg);
+
+            transform-origin: right center;
+        }
+
+        .arm-right {
+            top: 120px;
+            left: 162px;
+
+            width: 65px;
+            height: 5px;
+
+            transform: rotate(30deg);
+
+            transform-origin: left center;
+        }
+
+        .leg-left {
+            top: 165px;
+            left: 128px;
+
+            width: 65px;
+            height: 5px;
+
+            transform: rotate(-55deg);
+
+            transform-origin: right center;
+        }
+
+        .leg-right {
+            top: 165px;
+            left: 162px;
+
+            width: 65px;
+            height: 5px;
+
+            transform: rotate(55deg);
+
+            transform-origin: left center;
+        }
+
+        /* JOGO */
+
+        .game-area {
+            text-align: center;
+        }
+
+        .attempts {
+            margin-bottom: 18px;
+
+            color: #a9b4d0;
+        }
+
+        .attempts strong {
+            color: #72c7ff;
+        }
+
+        .word {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: flex-end;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-bottom: 28px;
+
+            min-height: 52px;
+        }
+
+        .letter {
+           width: 42px;
+           height: 52px;
+
+           display: flex;
+
+           align-items: center;
+           justify-content: center;
+
+           border-bottom: 3px solid #72c7ff;
+
+            font-size: 1.8rem;
+
+            font-weight: bold;
+
+            color: #f4f5ff;
+
+           transition:
+             color 0.25s ease,
+             transform 0.25s ease;
+        }
+
+        .letter:not(:empty) {
+           transform: translateY(-3px);
+        }
+
+        .keyboard {
+            display: grid;
+
+            grid-template-columns:
+                repeat(7, 1fr);
+
+            gap: 9px;
+
+            max-width: 500px;
+
+            margin: 0 auto;
+        }
+
+        .key {
+           min-height: 42px;
+           padding: 9px 6px;
+
+           border: 1px solid rgba(112, 143, 255, 0.25);
+           border-radius: 10px;
+
+           background: linear-gradient(
+             145deg,
+           rgba(25, 31, 52, 0.95),
+           rgba(13, 16, 29, 0.95)
+         ) !important;
+
+           color: #f4f5ff !important;
+
+           font-size: 0.9rem;
+           font-weight: 600;
+
+           cursor: pointer;
+
+           transition:
+             transform 0.2s ease,
+             border-color 0.2s ease,
+             background 0.2s ease,
+             box-shadow 0.2s ease;
+ }
+
+        .key:hover:not(:disabled) {
+            transform: translateY(-3px);
+
+            border-color: #72c7ff;
+
+            background:
+               linear-gradient(
+               145deg,
+               rgba(38, 48, 78, 0.95),
+               rgba(20, 25, 42, 0.95)
+            ) !important;
+  
+
+            box-shadow:
+               0 8px 20px rgba(80, 150, 255, 0.12);
+        }
+        
+
+        .key:disabled {
+            opacity: 0.28;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+        .message {
+            min-height: 30px;
+
+            margin-top: 26px;
+
+            font-size: 1.05rem;
+
+            font-weight: bold;
+
+            color: #f4f5ff;
+
+            transition: opacity 0.3s ease;
+        }
+
+        .restart {
+            margin-top: 20px;
+
+            padding: 13px 25px;
+
+            border: none;
+
+            border-radius: 11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #4ea3ff,
+                    #8d6cff
+                );
+
+            color: white;
+
+            font-size: 0.9rem;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+             box-shadow:
+                0 8px 25px rgba(80, 120, 255, 0.15);
+
+            transition:
+             transform 0.2s ease,
+             box-shadow 0.2s ease;
+        }
+
+        .restart:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 30px rgba(80, 120, 255, 0.3);
+        }
+
+        .back {
+            display: inline-block;
+
+            margin-top: 30px;
+
+            color: #72c7ff;
+
+            text-decoration: none;
+
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 700px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .game-container {
+                padding: 25px 18px;
+            }
+
+            .game {
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+            }
+
+            .hangman {
+                min-height: 260px;
+            }
+
+            .keyboard {
+                grid-template-columns:
+                    repeat(6, 1fr);
+            }
+
+        }
